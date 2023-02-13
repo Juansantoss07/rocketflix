@@ -1,0 +1,45 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favico/favicon.ico" type="image/x-icon">
+    <title>RocketFlix</title>
+</head>
+<body>
+    <div class='container-body'>
+        <div class="logo">
+          <img src="assets/favico/android-chrome-512x512.png" alt="" />
+        </div>
+        <div class="title">
+          <h1>Não sabe o que assitir?</h1>
+        </div>
+        <div class="movie" id="movie">
+            <div class="bannerMovie">
+                <img src="" alt="Capa do Filme" id="bannerMovie">
+            </div> 
+            <div class="infosMovie">
+                <p class="titleMovie" id="titleMovie"></p>
+                <p class="sinopseMovie" id="sinopseMovie"></p>
+            </div>
+        </div>
+        <div class="bannerMovieMobile" id="mobile">
+            <img src="" alt="" id="bannerMovieMobile">
+        </div>
+        <div class="error" id="error">
+            <span>Houve um erro, por favor tente novamente</span>
+        </div>
+        <div class='button'>
+          <button onclick="getMovie(Math.floor(Math.random() * 900 - 1) + 1)">
+            <img src="assets/favico/apple-touch-icon.png" alt="" />
+            <p>Encontrar filme</p>
+          </button>
+        </div>
+        <div class="desc">
+          <p>Clique em "Encontrar filme" que traremos informações de algum filme para você assistir hoje.</p>
+        </div>
+      </div>
+</body>
+</html>
