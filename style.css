@@ -73,8 +73,7 @@
     display: flex;
     background-color: var(--background-color-black-movie);
     backdrop-filter: blur(12px);
-    max-width: 80%;
-    border-radius: 10px;
+    width: 60%;
     padding-right: 1rem;
     justify-content: space-between;
     margin: 1rem 0;
@@ -85,7 +84,6 @@
 .movie img{
     width: 100%;
     height: 100%;
-    border-radius: 10px 0 0 10px;
 }
 
 .bannerMovie{
@@ -122,16 +120,28 @@
     color: red;
     font-weight: 900;
     display: none;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
-.bannerMovieMobile{
-    width: 30%;
-    background-color: red;
-    display: none;
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    background-color: var(--background-color-black-movie);
 }
 
-.bannerMovieMobile img{
-    width: 100%;
+footer p{
+    color: var(--title);
+}
+
+footer p a{
+    color: var(--title);
 }
 
 /* Responsives */
@@ -140,29 +150,39 @@
     .container-body{
         height: auto;
         min-height: 100vh;
+        padding-bottom: 5rem;
     }
 
     .movie{
         flex-direction: column;
         height: auto;
         align-items: center;
-        padding: 1rem;
+        padding: 0;
         background: transparent;
+        width: 100%;
     }
 
     .movie img{
         margin-top: 1rem;
+        border-radius: 5px;
+    }
+
+    .bannerMovie{
+        width: 50%;
     }
 
     .infosMovie{
         align-items: center;
+        margin-top: 1rem;
+    }
+
+    .sinopseMovie{
+        text-align: center;
     }
 
     .error{
-        width: 100%;
+        width: 90%;
+        text-align: center;
     }
-    
-    .bannerMovie{
-        display: none;
-    }
+
 }
