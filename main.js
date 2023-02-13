@@ -8,7 +8,7 @@ let mobile = document.getElementById('mobile')
 
 function getMovie(id){
 
-    fetch(`${BASE_URL}/${id}?api_key=${API_KEY}`)
+    fetch(`${BASE_URL}/${id}?api_key=${API_KEY}&${language}`)
     .then(response => response.json())
     .then(data => {
         if(data.status_code === 34){
@@ -20,7 +20,7 @@ function getMovie(id){
         }else {
                 titleMovie.textContent = data.original_title
                 sinopseMovie.textContent = data.overview
-                bannerMovie.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
+                bannerMovie.src = `${IMG_URL}/${data.poster_path}`
                 movie.style.display = 'flex'
         }
     })
