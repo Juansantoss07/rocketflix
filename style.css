@@ -176,7 +176,8 @@ footer p a{
         margin-top: 1rem;
     }
 
-    .sinopseMovie{
+    .sinopseMovie,
+    .titleMovie{
         text-align: center;
     }
 
