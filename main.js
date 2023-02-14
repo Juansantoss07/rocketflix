@@ -13,10 +13,10 @@ function getMovie(id){
     .then(response => response.json())
     .then(data => {
         if(data.status_code === 34){
-           getMovie()
+           getMovie(Math.floor(Math.random() * 900 - 1) + 1)
         }else {
             if(data.overview === '' | null ){
-               sinopseMovie.textContent = "Filme sem Sinopse"
+               getMovie(Math.floor(Math.random() * 900 - 1) + 1)
             }else{
                 titleMovie.textContent = data.original_title
                 sinopseMovie.textContent = data.overview
