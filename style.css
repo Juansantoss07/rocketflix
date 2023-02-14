@@ -144,6 +144,7 @@
     margin-top: 1rem;
     background: #195d68;
     color: #195d68;
+    border-radius: 20px;
 }
 
 #loading::after{
