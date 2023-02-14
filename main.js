@@ -5,6 +5,7 @@ const language = 'language=pt-BR';
 let movie = document.getElementById('movie')
 let error = document.getElementById('error')
 let mobile = document.getElementById('mobile')
+let btnGetMovie = document.getElementById('btnGetMovie')
 
 function getMovie(id){
 
@@ -14,14 +15,20 @@ function getMovie(id){
         if(data.status_code === 34){
             error.style.display = 'flex'
             movie.style.display = 'none'
+            btnGetMovie.style.display = 'none'
             setTimeout(() =>{
                 error.style.display = 'none'
-            }, 4000)
+                btnGetMovie.style.display = 'flex'
+            }, 2000)
         }else {
+            if(data.overview === '' | null ){
+               sinopseMovie.textContent = "Filme sem Sinopse"
+            }else{
                 titleMovie.textContent = data.original_title
                 sinopseMovie.textContent = data.overview
                 bannerMovie.src = `${IMG_URL}/${data.poster_path}`
                 movie.style.display = 'flex'
+            }
         }
     })
     .catch(error => console.error(error))

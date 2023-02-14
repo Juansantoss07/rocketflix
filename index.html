@@ -28,8 +28,13 @@
 
         <div class="error" id="error">
             <span>Houve um erro, por favor tente novamente.</span>
+            <div class="loadingFrame">
+                <div id="loading">
+                 
+                </div>
+            </div>
         </div>
-        <div class='button'>
+        <div class='button' id="btnGetMovie">
           <button onclick="getMovie(Math.floor(Math.random() * 900 - 1) + 1)">
             <img src="assets/favico/apple-touch-icon.png" alt="" />
             <p>Encontrar filme</p>

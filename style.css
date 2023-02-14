@@ -115,14 +115,43 @@
     background: var(--background-color-black);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: red;
     font-weight: 900;
-    display: none;
     padding: 1rem;
     margin-top: 1rem;
+    display: none;
 }
+
+.loadingFrame{
+    width: 100%;
+}
+
+#loading{
+    animation: loading 2s;
+    margin-top: 1rem;
+    background: #195d68;
+    color: #195d68;
+}
+
+#loading::after{
+    content: '.';
+}
+
+@keyframes loading{
+    0%{
+        width: 0%;
+    }
+
+
+
+    100%{
+        width: 100%;
+    }
+}
+
 
 footer{
     display: flex;
