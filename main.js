@@ -22,6 +22,7 @@ function getMovie(id){
                 sinopseMovie.textContent = data.overview
                 bannerMovie.src = `${IMG_URL}/${data.poster_path}`
                 movie.style.display = 'flex'
+                window.scrollTo(0, 0);
             }
         }
     })
