@@ -104,11 +104,21 @@
     font-weight: 600;
     font-size: 24px;
     color: #ffffff;
+    margin-top: 1rem;
 }
 
 .sinopseMovie{
     overflow: auto;
+    margin: 1rem 0;
 }
+
+.sinopseMovie::-webkit-scrollbar {
+    width: 8px;    
+  }
+  
+  .sinopseMovie::-webkit-scrollbar-thumb {
+    background-color: var(--background-color-blue);   
+  }
 
 .error{
     width: 60%;
@@ -118,7 +128,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: red;
+    color: var(--title);
     font-weight: 900;
     padding: 1rem;
     margin-top: 1rem;
