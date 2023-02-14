@@ -13,13 +13,7 @@ function getMovie(id){
     .then(response => response.json())
     .then(data => {
         if(data.status_code === 34){
-            error.style.display = 'flex'
-            movie.style.display = 'none'
-            btnGetMovie.style.display = 'none'
-            setTimeout(() =>{
-                error.style.display = 'none'
-                btnGetMovie.style.display = 'flex'
-            }, 2000)
+           getMovie()
         }else {
             if(data.overview === '' | null ){
                sinopseMovie.textContent = "Filme sem Sinopse"
