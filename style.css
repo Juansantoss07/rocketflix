@@ -82,7 +82,7 @@
     height: 280px;
 }
 
-.movie img{
+.bannerMovie img{
     width: 100%;
     height: 100%;
 }
@@ -203,9 +203,9 @@ footer p a{
         width: 100%;
     }
 
-    .movie img{
+    .bannerMovie img{
         margin-top: 1rem;
-        border-radius: 5px;
+        border-radius: 0px;
     }
 
     .bannerMovie{
